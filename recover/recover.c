@@ -33,7 +33,7 @@ if(argc == 0)
         {
          sprintf(name,"%03i.jpg",k);//to create a name and store it in "name" array
           img = fopen(name,"w");//to open a file with name and give its address of the file
-         fwrite(buffer,512 * sizeof(char),1,img);//to copy the jpeg block to file pointed by img
+         fwrite(buffer,512 * sizeof(char),1,img);
          j = 1;
          k++;//to increment the count of number of image
 
@@ -43,7 +43,7 @@ if(argc == 0)
          fclose(img);
 
          sprintf(name,"%03i.jpg",k);
-         img = fopen(name,"w");
+         img = fopen(name,"w");//to copy the jpeg block to file pointed by img
          fwrite(buffer,512 * sizeof(char),1,img);
          j = 1;
          k++;
